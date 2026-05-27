@@ -1,49 +1,43 @@
-let personagens = [];
+let produtos = [];
+let soma = 0;
 
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 5; i++) {
     let nome;
-    let obra;
-    let tipoDaObra;
 
     while (true) {
-        nome = prompt("Digite o nome do(a) personagem");
+        nome = prompt("Digite o nome do produto:");
 
         if (nome.trim() == "") {
-            alert("Nome invalido")
-        } else {
-            break; //vai "brecar" o looping
-        }
-    }
-    while (true) {
-        obra = prompt("Digite qual a obra que o personagem faz parte:");
-        if (obra.trim() == "") {
-            alert("Obra invalida");
-        } else {
-            break;
-        }
-    }
-    while (true) {
-        tipoDaObra = prompt("Escreva qualo tipo da obra: (filme, série ou jogo)");
-        if (tipoDaObra.trim() == "") {
-            alert("Tipo de obra invalido")
+            alert("Nome inválido");
         } else {
             break;
         }
     }
 
-    personagens[i] = {
-        personagemNome: nome,
-        personagemObra: obra,
-        personagemTipo: tipoDaObra
-    }
-}
-let mensagem = "===PERSONAGEM===\n\n";
+    let preco;
 
-for (let i = 0; i < personagens.length; i++) {
-    mensagem += "Nome do personagem: " + personagens[i].personagemNome + "\n";
-    mensagem += "Obra do personagem: " + personagens[i].personagemObra + "\n";
-    mensagem += "Tipo da obra do personagem: " + personagens[i].personagemTipo + "\n";
-    
+    while (true) {
+        preco = Number(prompt("Digite o preço do produto:"));
+
+        if (isNaN(preco)) {
+            alert("Preço inválido");
+        } else {
+            break;
+        }
+    }
+    produtos[i] = {
+        nomeProduto: nome,
+        precoProduto: preco
+    }
+    soma += produtos[i].precoProduto;
 }
-alert (mensagem)
-//jdudbusdgcius
+
+let mensagem = "---PRODUTOS---\n\n";
+
+for (let i = 0; i < produtos.length; i++) {
+    mensagem += "Produto: " + produtos[i].nomeProduto + "\n";
+    mensagem += "Preço: R$ " + produtos[i].precoProduto + "\n";
+    mensagem += "----------------------------\n";
+}
+mensagem += "Soma: " + soma
+alert(mensagem);
