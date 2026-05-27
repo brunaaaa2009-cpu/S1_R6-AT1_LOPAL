@@ -1,6 +1,5 @@
-let personagens = [];
+let personagens;
 
-for (let i = 0; i < 1; i++) {
     let nome;
     let obra;
     let tipoDaObra;
@@ -31,18 +30,11 @@ for (let i = 0; i < 1; i++) {
         }
     }
 
-    personagens[i] = {
+    personagens = {
         personagemNome: nome,
         personagemObra: obra,
         personagemTipo: tipoDaObra
     }
-}
-let mensagem = "===PERSONAGEM===\n\n";
 
-for (let i = 0; i < personagens.length; i++) {
-    mensagem += "Nome do personagem: " + personagens[i].personagemNome + "\n";
-    mensagem += "Obra do personagem: " + personagens[i].personagemObra + "\n";
-    mensagem += "Tipo da obra do personagem: " + personagens[i].personagemTipo + "\n";
-    
-}
-alert (mensagem)
+
+alert(`O personagem ${personagens.personagemNome} é da obra ${personagens.personagemObra} que é um(a) ${personagens.personagemTipo}`);
