@@ -41,3 +41,4 @@ for (let i = 0; i < produtos.length; i++) {
 }
 mensagem += "Soma: " + soma
 alert(mensagem);
+//duycduygud
