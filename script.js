@@ -1,26 +1,48 @@
-let numeros = [];
+let personagens = [];
 
-for (let i = 0; i < 5; i++) {
-    
-     while (true) {
-       numeros[i] = prompt("Digite o número");
+for (let i = 0; i < 1; i++) {
+    let nome;
+    let obra;
+    let tipoDaObra;
 
-        // trim remove os espaços em branco da variável
-        if (numeros[i].trim() == "") {
-            alert("Número inválido");
+    while (true) {
+        nome = prompt("Digite o nome do(a) personagem");
+
+        if (nome.trim() == "") {
+            alert("Nome invalido")
         } else {
-            break; // Vai "brecar" o looping
+            break; //vai "brecar" o looping
         }
     }
+    while (true) {
+        obra = prompt("Digite qual a obra que o personagem faz parte:");
+        if (obra.trim() == "") {
+            alert("Obra invalida");
+        } else {
+            break;
+        }
+    }
+    while (true) {
+        tipoDaObra = prompt("Escreva qualo tipo da obra: (filme, série ou jogo)");
+        if (tipoDaObra.trim() == "") {
+            alert("Tipo de obra invalido")
+        } else {
+            break;
+        }
+    }
+
+    personagens[i] = {
+        personagemNome: nome,
+        personagemObra: obra,
+        personagemTipo: tipoDaObra
+    }
 }
+let mensagem = "===PERSONAGEM===\n\n";
 
-// \n quebra a linha no alert!
-let mensagem = "=== NÚMEROS ===\n\n";
-
-for (let i = 0; i < numeros.length; i++) {
-    mensagem += "Número digitado: " + numeros[i] + "\n";
-    mensagem += "----------------\n";
+for (let i = 0; i < personagens.length; i++) {
+    mensagem += "Nome do personagem: " + personagens[i].personagemNome + "\n";
+    mensagem += "Obra do personagem: " + personagens[i].personagemObra + "\n";
+    mensagem += "Tipo da obra do personagem: " + personagens[i].personagemTipo + "\n";
+    
 }
-
-alert(mensagem);
-//dhushdushdis
+alert (mensagem)
