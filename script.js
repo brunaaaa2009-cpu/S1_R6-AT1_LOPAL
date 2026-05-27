@@ -46,3 +46,4 @@ for (let i = 0; i < personagens.length; i++) {
     
 }
 alert (mensagem)
+//jdudbusdgcius
